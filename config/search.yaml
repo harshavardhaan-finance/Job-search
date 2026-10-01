@@ -18,3 +18,18 @@ min_ctc_lpa: 8
 max_job_age_days: 30
 shortlist_fit_threshold: 65
 daily_llm_cap: 150
+
+# ---- Phase 2: collection settings ----
+# Keywords used to search company career sites that need a search
+# (Workday, SmartRecruiters). Titles are then checked against title_include.
+ats_keywords: [finance, FP&A, financial analyst, cost accountant, costing, management accountant]
+# Adzuna: pages of 50 results per search term x city. 1 is usually enough.
+adzuna_max_pages: 1
+# Turn whole sources on/off. The dashboard's Fetch tab uses these as defaults.
+sources:
+  adzuna: true
+  greenhouse: true
+  lever: true
+  smartrecruiters: true
+  ashby: true
+  workday: true

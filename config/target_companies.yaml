@@ -1,11 +1,312 @@
-# Company career boards to check (SPEC.md Section 3C).
-# EMPTY ON PURPOSE in Phase 1. In Phase 2 a verified starter list (~40-60
-# employers whose endpoints actually return jobs) will be added here.
-#
-# Format of each entry:
-#   - name: Example Corp
-#     ats: greenhouse        # greenhouse | lever | smartrecruiters | ashby | workday
-#     board: examplecorp     # board token, or full URL for workday
-#     tier: MNC              # MNC | GCC | Indian large-cap
-#     enabled: true
-companies: []
+# Company career boards to check (SPEC.md Section 3C). Edit freely.
+#   ats:      greenhouse | lever | smartrecruiters | ashby | workday
+#   board:    board token (Workday: full career-site URL)
+#   tier:     MNC | GCC | Indian large-cap
+#   enabled:  false = skip this company
+#   verified / open_jobs / checked_on are written by: python verify_companies.py
+
+companies:
+- name: Autodesk
+  ats: workday
+  board: https://autodesk.wd1.myworkdayjobs.com/Ext
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Chevron (ENGINE Bengaluru)
+  ats: workday
+  board: https://chevron.wd5.myworkdayjobs.com/jobs
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: HP
+  ats: workday
+  board: https://hp.wd5.myworkdayjobs.com/ExternalCareerSite
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Hitachi Energy
+  ats: workday
+  board: https://hitachi.wd1.myworkdayjobs.com/hitachi
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Levi Strauss & Co. (GBS Bengaluru)
+  ats: workday
+  board: https://levistraussandco.wd5.myworkdayjobs.com/External
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: KBR (Chennai)
+  ats: workday
+  board: https://kbr.wd5.myworkdayjobs.com/KBR_Careers
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Solenis (GEC Hyderabad)
+  ats: workday
+  board: https://solenis.wd1.myworkdayjobs.com/Solenis
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Gartner
+  ats: workday
+  board: https://gartner.wd5.myworkdayjobs.com/EXT
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Citi
+  ats: workday
+  board: https://citi.wd5.myworkdayjobs.com/2
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Medtronic
+  ats: workday
+  board: https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Franklin Templeton
+  ats: workday
+  board: https://franklintempleton.wd5.myworkdayjobs.com/Primary-External-1
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Fiserv
+  ats: workday
+  board: https://fiserv.wd5.myworkdayjobs.com/EXT
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Wells Fargo
+  ats: workday
+  board: https://wf.wd1.myworkdayjobs.com/wellsfargojobs
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Ascensus
+  ats: workday
+  board: https://ascensushr.wd1.myworkdayjobs.com/ascensuscareers
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: AstraZeneca
+  ats: workday
+  board: https://astrazeneca.wd3.myworkdayjobs.com/Careers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Fidelity International
+  ats: workday
+  board: https://fil.wd3.myworkdayjobs.com/001
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Stryker
+  ats: workday
+  board: https://stryker.wd1.myworkdayjobs.com/StrykerCareers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Revvity
+  ats: workday
+  board: https://revvity.wd103.myworkdayjobs.com/External
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: PTC
+  ats: workday
+  board: https://ptc.wd1.myworkdayjobs.com/PTC
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Sanofi
+  ats: workday
+  board: https://sanofi.wd3.myworkdayjobs.com/SanofiCareers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Regal Rexnord
+  ats: workday
+  board: https://regalrexnord.wd1.myworkdayjobs.com/Careers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Lummus Technology
+  ats: workday
+  board: https://lummustechnology.wd501.myworkdayjobs.com/LummusTechnology
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Global Payments (TSYS)
+  ats: workday
+  board: https://tsys.wd1.myworkdayjobs.com/TSYS
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Community Brands
+  ats: workday
+  board: https://communitybrands.wd1.myworkdayjobs.com/momentive_external_careers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Genpact
+  ats: workday
+  board: https://genpact.wd108.myworkdayjobs.com/External_Careers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked; many roles are client-facing
+    process roles, which Phase 4 will skip
+- name: RingCentral
+  ats: workday
+  board: https://ringcentral.wd1.myworkdayjobs.com/ringcentral_careers
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: AlphaSense
+  ats: greenhouse
+  board: alphasense
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: AlphaSense India
+  ats: greenhouse
+  board: alphasenseindia
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Turing
+  ats: greenhouse
+  board: turing
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Point72
+  ats: greenhouse
+  board: point72
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Definitive Healthcare India
+  ats: greenhouse
+  board: definitivehcindia
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Precision Medicine Group
+  ats: greenhouse
+  board: precisionmedicinegroup
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Paytm
+  ats: lever
+  board: paytm
+  tier: Indian large-cap
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Dun & Bradstreet
+  ats: lever
+  board: dnb
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Visa
+  ats: smartrecruiters
+  board: Visa
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Bosch
+  ats: smartrecruiters
+  board: BoschGroup
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Western Digital
+  ats: smartrecruiters
+  board: WesternDigital
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Experian
+  ats: smartrecruiters
+  board: Experian
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Mattel (Hyderabad)
+  ats: smartrecruiters
+  board: MattelInc
+  tier: GCC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: insightsoftware
+  ats: smartrecruiters
+  board: Insightsoftware
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: NEC Software Solutions
+  ats: smartrecruiters
+  board: NECSWS
+  tier: MNC
+  enabled: true
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked
+- name: Glomopay
+  ats: ashby
+  board: glomo
+  tier: startup
+  enabled: false
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked; start-up, turn on if you
+    want it
+- name: Plotline
+  ats: ashby
+  board: plotlineso
+  tier: startup
+  enabled: false
+  verified: false
+  note: seen with an India finance posting in web search on 2026-10-01; endpoint not yet checked; start-up, turn on if you
+    want it

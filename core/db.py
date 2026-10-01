@@ -169,7 +169,8 @@ def list_jobs(conn: sqlite3.Connection) -> list[dict]:
     rows = conn.execute(
         """SELECT j.id, j.title, j.company, j.location, j.is_remote, j.is_abroad,
                   j.source, j.posted_date, j.salary_text, j.experience_text,
-                  j.first_seen, a.status
+                  j.first_seen, j.last_seen, a.status,
+                  (SELECT GROUP_CONCAT(DISTINCT u.source) FROM job_urls u WHERE u.job_id = j.id) AS seen_on
            FROM jobs j LEFT JOIN applications a ON a.job_id = j.id
            ORDER BY j.first_seen DESC, j.id DESC"""
     ).fetchall()
@@ -187,6 +188,27 @@ def get_job_urls(conn: sqlite3.Connection, job_id: int) -> list[dict]:
         (job_id,),
     ).fetchall()
     return [dict(r) for r in rows]
+
+
+def log_run(conn, started_at: str, source: str, fetched: int, new: int,
+            errors: list[str], duration_s: float) -> None:
+    conn.execute(
+        "INSERT INTO runs (started_at, source, fetched, new, errors, duration_s) VALUES (?, ?, ?, ?, ?, ?)",
+        (started_at, source, fetched, new, "\n".join(errors) or None, duration_s),
+    )
+    conn.commit()
+
+
+def list_runs(conn: sqlite3.Connection, limit: int = 50) -> list[dict]:
+    rows = conn.execute("SELECT * FROM runs ORDER BY id DESC LIMIT ?", (limit,)).fetchall()
+    return [dict(r) for r in rows]
+
+
+def count_duplicate_keys(conn: sqlite3.Connection) -> int:
+    """Should always be 0: the 'no duplicates' check for Phase 2."""
+    return conn.execute(
+        "SELECT COUNT(*) FROM (SELECT dedupe_key FROM jobs GROUP BY dedupe_key HAVING COUNT(*) > 1)"
+    ).fetchone()[0]
 
 
 def _iso(value) -> str | None:

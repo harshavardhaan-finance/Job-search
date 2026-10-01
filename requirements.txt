@@ -1,6 +1,8 @@
-# Phase 1 packages. Later phases will add more (anthropic, requests, python-docx, ...).
+# Packages for Phases 1-2. Later phases add more (anthropic, python-docx, ...).
 streamlit>=1.46
 pydantic>=2.6
 pyyaml>=6.0
 python-dotenv>=1.0
+requests>=2.31
+beautifulsoup4>=4.12
 pytest>=8.0
