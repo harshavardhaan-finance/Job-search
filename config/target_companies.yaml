@@ -1,0 +1,11 @@
+# Company career boards to check (SPEC.md Section 3C).
+# EMPTY ON PURPOSE in Phase 1. In Phase 2 a verified starter list (~40-60
+# employers whose endpoints actually return jobs) will be added here.
+#
+# Format of each entry:
+#   - name: Example Corp
+#     ats: greenhouse        # greenhouse | lever | smartrecruiters | ashby | workday
+#     board: examplecorp     # board token, or full URL for workday
+#     tier: MNC              # MNC | GCC | Indian large-cap
+#     enabled: true
+companies: []

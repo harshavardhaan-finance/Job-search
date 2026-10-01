@@ -1,0 +1,14 @@
+# Screening answers used to pre-fill applications (SPEC.md Section 6).
+# HOW TO USE: copy this file to "answers.yaml" in the same folder and fill it in.
+# "answers.yaml" is in .gitignore because it holds your salary details.
+# Write only true facts.
+notice_period: "FILL_ME (e.g. Immediate / 30 days)"
+current_ctc_lpa: "FILL_ME"
+expected_ctc_lpa: "FILL_ME"
+open_to_relocation: true
+earliest_joining_date: "FILL_ME (YYYY-MM-DD)"
+current_location: "Coimbatore, Tamil Nadu"
+links:
+  linkedin: "FILL_ME"
+  email: "FILL_ME"
+  phone: "FILL_ME"

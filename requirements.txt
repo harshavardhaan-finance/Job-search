@@ -1,0 +1,6 @@
+# Phase 1 packages. Later phases will add more (anthropic, requests, python-docx, ...).
+streamlit>=1.46
+pydantic>=2.6
+pyyaml>=6.0
+python-dotenv>=1.0
+pytest>=8.0

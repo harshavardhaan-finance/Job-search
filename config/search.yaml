@@ -1,0 +1,20 @@
+# Search and filter settings (SPEC.md Section 13).
+# Used from Phase 2 (collectors) and Phase 4 (rule filter). Edit freely.
+search_terms:
+  - FP&A analyst
+  - financial planning and analysis
+  - cost accountant
+  - costing analyst
+  - business finance analyst
+  - commercial finance analyst
+  - management accountant
+  - financial analyst
+  - CMA
+title_include: [fp&a, planning, cost, costing, business finance, commercial finance, management account, financial analyst, finance analyst, budget, variance, mis]
+title_exclude: [tax, gst, audit, compliance, statutory, payroll, sales, relationship manager, insurance, manager - team, lead, head, director, intern]
+locations: [Bengaluru, Chennai, Hyderabad, Pune, Coimbatore, Mumbai, Gurugram, Noida, Remote]
+max_required_experience_years: 4
+min_ctc_lpa: 8
+max_job_age_days: 30
+shortlist_fit_threshold: 65
+daily_llm_cap: 150
